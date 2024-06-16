@@ -1,6 +1,7 @@
 ## Objetivo desta aplicação
 <p> Estudar Livewire</p>
 <p> https://livewire.laravel.com/docs/quickstart </p>
+<p> https://livewire.laravel.com/docs/quickstart </p>
 <p> Abaixo segue sequencia de instalação</p>
 
 ## 03_CLGVT_LW
