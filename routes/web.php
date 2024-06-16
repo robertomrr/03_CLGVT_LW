@@ -26,5 +26,5 @@ Route::view('profile', 'profile')
     ->name('profile');
 
 Route::get('/counter', CounterController::class);
-Route::get('/post', CreatePostController::class);
+Route::get('/posts', CreatePostController::class);
 require __DIR__.'/auth.php';
