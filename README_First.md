@@ -106,7 +106,10 @@
 	> php artisan key:generate
 ## Criando Aplicação Livewire
 - **
-	> 
+	> php artisan make:livewire CreatePostController
+		Só com este comando e a inclusão da rota ( Route::get('/post', CreatePostController::class); ) é o suficiente para a aplicação rodar
+	> php artisan make:model Post -mfs
+	> php artisan livewire:form PostForm
 _____________________________________________________________________________
 Criação de Rotas
 Retornar conteúdo padronizado utilizando Resources

@@ -1,7 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use App\Livewire\CounterController;
+use Illuminate\Support\Facades\Route;
+use App\Livewire\CreatePostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,5 +26,5 @@ Route::view('profile', 'profile')
     ->name('profile');
 
 Route::get('/counter', CounterController::class);
-
+Route::get('/post', CreatePostController::class);
 require __DIR__.'/auth.php';
