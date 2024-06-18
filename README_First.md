@@ -1,13 +1,14 @@
 ## Objetivo desta aplicação
-<p> Estudar Livewire</p>
-<p> https://livewire.laravel.com/docs/quickstart </p>
-<p> https://livewire.laravel.com/docs/quickstart </p>
-<p> Abaixo segue sequencia de instalação</p>
+    -**
+    <p> Estudar Livewire</p>
+    <p> https://livewire.laravel.com/docs/quickstart </p>
+    <p> https://livewire.laravel.com/docs/quickstart </p>
+    <p> Abaixo segue sequencia de instalação</p>
 
 ## 03_CLGVT_LW
 
 ## Criar Aplicação 
-- **
+    - **
 	> composer create-project --prefer-dist laravel/laravel:^10.* 03_CLGVT_LW
 	> cd 03_CLGVT_LW
 	> git init
