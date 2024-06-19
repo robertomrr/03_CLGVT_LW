@@ -11,7 +11,22 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        $projects= '';
+        $tasks='';
+        // Option 1: -> with()
+        return view('Users-View')
+        ->with('Projects',$projects)
+        ->with('tasks',$tasks);
+
+        // Option 2: as an array
+        return view('Users-View',['Projects' => $projects, 'tasks' => $tasks ]);
+
+        // Option 3: the same but with variable
+        $data = ['Projects' => $projects, 'tasks' => $tasks ];
+                return view('Users-View',$data);
+
+       // Option 4: The shortest - compact()         
+       return view('Users-View',compact('Projects','tasks') );
     }
 
     /**
