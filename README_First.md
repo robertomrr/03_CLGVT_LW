@@ -1,13 +1,14 @@
 ## Objetivo desta aplicação
-<p> Estudar Livewire</p>
-<p> https://livewire.laravel.com/docs/quickstart </p>
-<p> https://livewire.laravel.com/docs/quickstart </p>
-<p> Abaixo segue sequencia de instalação</p>
+    -**
+    <p> Estudar Livewire</p>
+    <p> https://livewire.laravel.com/docs/quickstart </p>
+    <p> https://livewire.laravel.com/docs/quickstart </p>
+    <p> Abaixo segue sequencia de instalação</p>
 
 ## 03_CLGVT_LW
 
 ## Criar Aplicação 
-- **
+    - **
 	> composer create-project --prefer-dist laravel/laravel:^10.* 03_CLGVT_LW
 	> cd 03_CLGVT_LW
 	> git init
@@ -42,7 +43,7 @@
 		warning: in the working copy of 'package.json', CRLF will be replaced by LF the next time Git touches it
 	> git commit -m "Instalação do Breeze (livewire)" 
 ## Instalar Tailwind
-- ** 
+    - ** 
 	> npm install -D tailwindcss postcss autoprefixer
 	> git add .
 	> git commit -m "npm install -D tailwindcss postcss autoprefixer" 
@@ -50,7 +51,7 @@
 	> git add .
 	> git commit -m "npx tailwindcss init -p" 
 ## > code .
-- **
+    - **
 	Configurar Idioma/Timezone
 		link
 			https://github.com/lucascudo/laravel-pt-BR-localization
@@ -80,19 +81,19 @@
 		DB_USERNAME=root
 		DB_PASSWORD=
 	Criar tabelas padrão no banco de dados ( users, ...)
-- **    
+    - **    
 	> php artisan migrate:fresh
 	Descomentar database\seeders\DatabaseSeeder.php
 	 	\App\Models\User::factory(10)->create();
 	Popular tabela users
 	> php artisan db:seed
 ## Publicar GitHub
-- **
+    - **
 	> git remote add origin https://github.com/robertomrr/03_CLGVT_LW.git
 	> git branch -M main
 	> git push -u origin main
 ## Ativar Aplicação
-- **
+    - **
 	> CMD 
 		> cd C:\laragon\www\03_CLGVT_LW
 		> npm run dev
@@ -100,13 +101,13 @@
 	> Browser
 		> localhost:8000
 ## Após clone
-- **
+    - **
 	> composer update
 	> npm install
 	> copy .env.example .env
 	> php artisan key:generate
 ## Criando Aplicação Livewire
-- **
+    - **
 	> php artisan make:livewire CreatePostController
 		Só com este comando e a inclusão da rota ( Route::get('/post', CreatePostController::class); ) é o suficiente para a aplicação rodar
 	> php artisan make:model Post -mfs
