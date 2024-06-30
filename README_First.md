@@ -94,10 +94,17 @@
 	> npm install
 	> copy .env.example .env
 	> php artisan key:generate
+## Criando endereços
+	> php artisan make:migration create_addresses_table --create=addresses
+	> php artisan migrate
+	> php artisan make:factory AddressFactory --model=Address
+	> php artisan make:seeder AddressSeeder
+	> php artisan make:model Address  
+	> php artisan db:seed
 ## Criando Aplicação Livewire
     - **
-	> php artisan make:livewire CreatePostController
-		Só com este comando e a inclusão da rota ( Route::get('/post', CreatePostController::class); ) é o suficiente para a aplicação rodar
+	> php artisan make:livewire CreateEndereco
+		Só com este comando e a inclusão da rota ( Route::get('/post', CreateEndereco::class); ) é o suficiente para a aplicação rodar
 	> php artisan make:model Post -mfs
 	> php artisan livewire:form PostForm
 _____________________________________________________________________________

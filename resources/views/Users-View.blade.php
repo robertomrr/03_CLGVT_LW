@@ -2,34 +2,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Create User</title>
+    <title>User</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
     <div class="container mx-auto bg-slate-400 text-center text-3xl">
         <p> Veja o Controller desta view , existem exemplos de passagem de parâmetros para uma views.</p>
     </div>
-    <div class="container mx-auto mt-5">
-        <h2 class="text-2xl mb-4">User Projects and Tasks</h2>
-
-        <div class="mb-4">
-            <h3 class="text-xl">Projects:</h3>
-            <ul class="list-disc ml-5">
-                @foreach($projects as $project)
-                    <li>{{ $project }}</li>
-                @endforeach
-            </ul>
-        </div>
-
-        <div class="mb-4">
-            <h3 class="text-xl">Tasks:</h3>
-            <ul class="list-disc ml-5">
-                @foreach($tasks as $task)
-                    <li>{{ $task }}</li>
-                @endforeach
-            </ul>
-        </div>
-    </div>
+    
+    @livewire('callviewexemple')
+    
     <div class="container mx-auto bg-slate-500 text-center text-3xl">
         <p> Abaixo Segue Exemplo de CRUD clássico utilizando Query Builder</p>
     </div>
@@ -43,9 +25,7 @@
         <button class="m-4"><a href="{{ route('user.index') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4 inline-block">Available</a></button>
     </div>
     <br>
-    <div class="container mx-auto bg-slate-500 text-center text-3xl">
-        <p> Abaixo Segue Exemplo de CRUD Livewire</p>
-    </div>
+
 </body>
 </html>
 
