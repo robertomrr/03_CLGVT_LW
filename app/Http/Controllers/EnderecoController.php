@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Address;
 
 class EnderecoController extends Controller
 {
@@ -11,7 +12,8 @@ class EnderecoController extends Controller
      */
     public function index()
     {
-        //
+        $enderecos = Address::all();
+        return view('user.endereco.index', compact('enderecos'));
     }
 
     /**

@@ -10,24 +10,27 @@ class UserController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function menu()
+    public function Exemplo()
     {
-        $projects = ['Project 1', 'Project 2', 'Project 3'];
-        $tasks = ['Task 1', 'Task 2', 'Task 3'];
-        // Option 1: -> with()
-        return view('Users-View')
-        ->with('projects',$projects)
-        ->with('tasks',$tasks);
+        return view('Welcome-User');
+        
+        // Option 1: -> with()____________________________________________________________________
+        //$projects = ['Project 1', 'Project 2', 'Project 3'];
+        //$tasks = ['Task 1', 'Task 2', 'Task 3'];
+        
+        //return view('Welcome-User')
+        //->with('projects',$projects)
+        //->with('tasks',$tasks);
 
-        // Option 2: as an array
-        //return view('Users-View',['projects' => $projects, 'tasks' => $tasks ]);
+        // Option 2: as an array_________________________________________________________________
+        //return view('Welcome-User',['projects' => $projects, 'tasks' => $tasks ]);
 
-        // Option 3: the same but with variable
+        // Option 3: the same but with variable__________________________________________________
         //$data = ['projects' => $projects, 'tasks' => $tasks ];
-        //        return view('Users-View',$data);
+        //        return view('Welcome-User',$data);
 
-       // Option 4: The shortest - compact()         
-       //return view('Users-View',compact('projects','tasks') );
+       // Option 4: The shortest - compact()_____________________________________________________
+       //return view('Welcome-User',compact('projects','tasks') );
     }
     
     public function index()

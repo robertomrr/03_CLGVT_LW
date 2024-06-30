@@ -6,10 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>User Address</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @livewireStyles()
 </head>
 <body>
     
     <livewire:index-endereco></livewire:index-endereco>
-    
+    @livewireScripts()
 </body>
 </html>

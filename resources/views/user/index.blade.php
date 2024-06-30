@@ -17,7 +17,7 @@
 
         <!-- Botão para acionar a função create -->
         <a href="{{ route('user.create') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4 inline-block">Create New User</a>
-        <a href="{{ route('user.menu') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4 inline-block">Back to Menu</a>  
+        <a href="{{ url('Welcome-User') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4 inline-block">Back to Welcome-User</a>  
 
         <table class="min-w-full bg-white">
             <thead>
