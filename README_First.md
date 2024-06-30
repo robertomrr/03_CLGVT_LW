@@ -15,15 +15,11 @@
 	> git add .
 	> git commit -m "First commit" 
 	> npm install
-	> git add .
-	> git commit -m "npm install" 
 ## Instalação do Breeze (livewire)
 	- ** [Laravel Breeze é uma implementação mínima e simples de todos os recursos de autenticação do Laravel , incluindo:
 	login, registro, redefinição de senha, verificação de e-mail e confirmação de senha. 
 	Além disso, o Breeze inclui uma página simples de “perfil” onde o usuário pode atualizar seu nome, endereço de e-mail e senha.
 	> composer require laravel/breeze --dev
-	> git add .
-	> git commit -m "composer require laravel/breeze --dev" 
 	> php artisan breeze:install
 		Which Breeze stack would you like to install?
 			Blade with Alpine ........................................................................................................ blade
@@ -42,36 +38,28 @@
 	> git add .
 		warning: in the working copy of 'package.json', CRLF will be replaced by LF the next time Git touches it
 	> git commit -m "Instalação do Breeze (livewire)" 
-## Instalar Tailwind
+## Instalação Tailwind
     - ** 
 	> npm install -D tailwindcss postcss autoprefixer
-	> git add .
-	> git commit -m "npm install -D tailwindcss postcss autoprefixer" 
 	> npx tailwindcss init -p
 	> git add .
-	> git commit -m "npx tailwindcss init -p" 
+	> git commit -m "Instalação Tailwind" 
 ## > code .
     - **
 	Configurar Idioma/Timezone
 		link
 			https://github.com/lucascudo/laravel-pt-BR-localization
-    > php artisan lang:publish
-	> git add .
-	> git commit -m "php artisan lang:publish" 
-	> composer require lucascudo/laravel-pt-br-localization --dev
-	> git add .
-	> git commit -m "composer require lucascudo/laravel-pt-br-localization --dev" 
-	> php artisan vendor:publish --tag=laravel-pt-br-localization
-	> git add .
-	> git commit -m "php artisan vendor:publish --tag=laravel-pt-br-localization" 
+	    > php artisan lang:publish
+		> composer require lucascudo/laravel-pt-br-localization --dev
+		> php artisan vendor:publish --tag=laravel-pt-br-localization
 		Alterar \config\app.php para: (Linha 86 do arquivo )
 			De > 'locale' => 'en',
 			P/ > 'locale' => 'pt_BR'
 		Alterar \config\app.php para: (Linha 73 do arquivo )
 			De 'timezone' => 'UTC',
 			P\ 'timezone' => 'America/Sao_Paulo',
-	> git add .
-	> git commit -m "Configurar Idioma/Timezone" 
+		> git add .
+		> git commit -m "Configurar Idioma/Timezone" 
 	Apontar banco de dados no arquivo .env ( De laravel P/ db_03lw)
 		.env
 		DB_CONNECTION=mysql
@@ -81,12 +69,12 @@
 		DB_USERNAME=root
 		DB_PASSWORD=
 	Criar tabelas padrão no banco de dados ( users, ...)
-    - **    
-	> php artisan migrate:fresh
-	Descomentar database\seeders\DatabaseSeeder.php
-	 	\App\Models\User::factory(10)->create();
-	Popular tabela users
-	> php artisan db:seed
+    	- **    
+		> php artisan migrate:fresh
+		Descomentar database\seeders\DatabaseSeeder.php
+	 		\App\Models\User::factory(10)->create();
+		Popular tabela users
+			> php artisan db:seed
 ## Publicar GitHub
     - **
 	> git remote add origin https://github.com/robertomrr/03_CLGVT_LW.git

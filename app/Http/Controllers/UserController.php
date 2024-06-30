@@ -3,30 +3,37 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function menu()
     {
-        $projects= '';
-        $tasks='';
+        $projects = ['Project 1', 'Project 2', 'Project 3'];
+        $tasks = ['Task 1', 'Task 2', 'Task 3'];
         // Option 1: -> with()
         return view('Users-View')
-        ->with('Projects',$projects)
+        ->with('projects',$projects)
         ->with('tasks',$tasks);
 
         // Option 2: as an array
-        return view('Users-View',['Projects' => $projects, 'tasks' => $tasks ]);
+        //return view('Users-View',['projects' => $projects, 'tasks' => $tasks ]);
 
         // Option 3: the same but with variable
-        $data = ['Projects' => $projects, 'tasks' => $tasks ];
-                return view('Users-View',$data);
+        //$data = ['projects' => $projects, 'tasks' => $tasks ];
+        //        return view('Users-View',$data);
 
        // Option 4: The shortest - compact()         
-       return view('Users-View',compact('Projects','tasks') );
+       //return view('Users-View',compact('projects','tasks') );
+    }
+    
+    public function index()
+    {
+        $users = User::all();
+        return view('user.index', compact('users'));
     }
 
     /**
@@ -34,7 +41,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('user.create');
     }
 
     /**
@@ -42,7 +49,19 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users',
+            'password' => 'required|string|min:8|confirmed',
+        ]);
+
+        User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => bcrypt($request->password),
+        ]);
+
+        return redirect()->route('user.create')->with('success', 'User created successfully.');
     }
 
     /**
@@ -50,7 +69,8 @@ class UserController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $user = User::findOrFail($id);
+        return view('user.show', compact('user'));
     }
 
     /**
@@ -58,7 +78,8 @@ class UserController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $user = User::findOrFail($id);
+        return view('user.edit', compact('user'));
     }
 
     /**
@@ -66,7 +87,18 @@ class UserController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users,email,'.$id,
+        ]);
+
+        $user = User::findOrFail($id);
+        $user->update([
+            'name' => $request->name,
+            'email' => $request->email,
+        ]);
+
+        return redirect()->route('user.index')->with('success', 'User updated successfully.');
     }
 
     /**
@@ -74,6 +106,9 @@ class UserController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $user = User::findOrFail($id);
+        $user->delete();
+
+        return redirect()->route('user.index')->with('success', 'User deleted successfully.');
     }
 }
