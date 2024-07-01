@@ -1,5 +1,5 @@
 ## Objetivo desta aplicação
-    -**
+    -** https://www.youtube.com/watch?v=e83fM_0mGa8&t=133s
     <p> Estudar Livewire</p>
     <p> https://livewire.laravel.com/docs/quickstart </p>
     <p> https://livewire.laravel.com/docs/quickstart </p>
