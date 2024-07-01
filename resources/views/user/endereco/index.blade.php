@@ -16,7 +16,7 @@
         @endif
 
         <!-- Botão para acionar a função create -->
-        <a href="{{ route('endereco.create') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4 inline-block">Create New Address</a>
+        <a href="{{ route('UserEndereco.create') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4 inline-block">Create New Address</a>
         <a href="{{ url('Welcome-Endereco') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4 inline-block">Back to Welcome-Endereco</a>  
 
         <table class="min-w-full bg-white">
@@ -42,10 +42,10 @@
                         <td class="py-2">{{ $endereco->zipcode }}</td>
                         <td class="py-2">
                             <!-- Formulário para excluir usuário -->
-                            <form action="{{ route('endereco.destroy', $endereco->id) }}" method="POST">
+                            <form action="{{ route('UserEndereco.destroy', $endereco->id) }}" method="POST">
                                 @csrf
-                                <button><a href="{{ route('endereco.show',['id'=> $endereco->id]) }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4 inline-block">Show</a></button>
-                                <button><a href="{{ route('endereco.edit',['id'=> $endereco->id]) }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4 inline-block">Edit</a></button>
+                                <button><a href="{{ route('UserEndereco.show',['id'=> $endereco->id]) }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4 inline-block">Show</a></button>
+                                <button><a href="{{ route('UserEndereco.edit',['id'=> $endereco->id]) }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4 inline-block">Edit</a></button>
                                 @method('DELETE')
                                 <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Delete</button>
                             </form>

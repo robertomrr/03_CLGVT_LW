@@ -1,12 +1,15 @@
 <?php
 
-use App\Livewire\CounterController;
 use Illuminate\Support\Facades\Route;
-use App\Livewire\CreatePostController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\EnderecoController;
 
-
+use App\Livewire\CreatePostController;
+use App\Livewire\CounterController;
+use App\Livewire\User\Endereco\UserEnderecoCreate;
+use App\Livewire\User\Endereco\UserEnderecoDestroy;
+use App\Livewire\User\Endereco\UserEnderecoShow;
+use App\Livewire\User\Endereco\UserEnderecoEdit;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -45,11 +48,15 @@ Route::put('/user/{id}/update', [UserController::class, 'update'])->name('user.u
 Route::delete('/user/{id}/destroy', [UserController::class, 'destroy'])->name('user.destroy');
 // Endereço
 Route::view('Welcome-Endereco', 'Welcome-Endereco');
-
 Route::get('/enderecos-index', [EnderecoController::class, 'index'])->name('endereco.index');
-Route::get('/endereco/create', [EnderecoController::class, 'create'])->name('endereco.create');
-Route::post('/endereco/store', [EnderecoController::class, 'store'])->name('endereco.store');
-Route::get('/endereco/{id}', [EnderecoController::class, 'show'])->name('endereco.show');
-Route::get('/endereco/{id}/edit', [EnderecoController::class, 'edit'])->name('endereco.edit');
-Route::put('/endereco/{id}/update', [EnderecoController::class, 'update'])->name('endereco.update');
-Route::delete('/endereco/{id}/destroy', [EnderecoController::class, 'destroy'])->name('endereco.destroy');
+
+Route::get('/UserEnderecoCreate',UserEnderecoCreate::class)->name('UserEndereco.create');
+Route::delete('/UserEnderecoDestroy',UserEnderecoDestroy::class)->name('UserEndereco.destroy');
+Route::get('/UserEnderecoShow',UserEnderecoShow::class)->name('UserEndereco.show');
+Route::get('/UserEnderecoEdit',UserEnderecoEdit::class)->name('UserEndereco.edit');
+// Route::get('/endereco/create', [EnderecoController::class, 'create'])->name('endereco.create');
+// Route::post('/endereco/store', [EnderecoController::class, 'store'])->name('endereco.store');
+// Route::get('/endereco/{id}', [EnderecoController::class, 'show'])->name('endereco.show');
+// Route::get('/endereco/{id}/edit', [EnderecoController::class, 'edit'])->name('endereco.edit');
+// Route::put('/endereco/{id}/update', [EnderecoController::class, 'update'])->name('endereco.update');
+// Route::delete('/endereco/{id}/destroy', [EnderecoController::class, 'destroy'])->name('endereco.destroy');

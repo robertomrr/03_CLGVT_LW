@@ -21,7 +21,7 @@ class EnderecoController extends Controller
      */
     public function create()
     {
-        //
+        return view('User.Endereco.UserEnderecoCreate');
     }
 
     /**

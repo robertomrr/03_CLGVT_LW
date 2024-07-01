@@ -10,7 +10,7 @@
 </head>
 <body>
     
-    <livewire:index-endereco></livewire:index-endereco>
+    <livewire:user.endereco.welcome-endereco-component_1></livewire:user.endereco.welcome-endereco-component_1>
     @livewireScripts()
 </body>
 </html>

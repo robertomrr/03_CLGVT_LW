@@ -1,10 +1,4 @@
 <div>
-    <div class="container mx-auto bg-slate-400 text-center text-3xl">
-        <p> Veja o Controller desta view , existem exemplos de passagem de parâmetros para uma views.</p>
-    </div>
-    
-    @livewire('callviewexemple')
-    
     <div class="container mx-auto bg-slate-500 text-center text-3xl">
         <p> Abaixo Segue Exemplo de CRUD utilizando Livewire</p>
     </div>
