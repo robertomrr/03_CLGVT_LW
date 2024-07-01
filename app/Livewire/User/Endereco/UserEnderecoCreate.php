@@ -30,6 +30,7 @@ class UserEnderecoCreate extends Component
         ]);
 
         $this->street = $this->city = $this->state = $this->country = $this->zipcode = null;
+        session()->flash('message','Endereço criado com sucesso');
     }
     
     public function render()

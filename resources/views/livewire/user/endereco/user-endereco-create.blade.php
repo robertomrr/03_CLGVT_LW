@@ -6,6 +6,12 @@
             {{ session('success') }}
         </div>
     @endif
+    
+    @if(session()->has('message') )
+        <div class="alert alert-success">
+            {{ session('message') }}
+        </div>
+    @endif
 
     <form wire:submit.prevent="create" method="POST">
         @csrf
