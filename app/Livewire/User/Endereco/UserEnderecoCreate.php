@@ -14,12 +14,17 @@ class UserEnderecoCreate extends Component
     public $zipcode;
 
     protected $rules = [
-        'zipcode' => 'required',
+        'zipcode' => 'required|min:8',
     ];
+
+    public function update($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
 
     public function create(){
 
-        //$this->validate();
+        $this->validate();
         //dd($this->street );
         Address::create([
             'street'  =>$this->street,
