@@ -51,9 +51,13 @@ Route::view('Welcome-Endereco', 'Welcome-Endereco');
 Route::get('/enderecos-index', [EnderecoController::class, 'index'])->name('endereco.index');
 
 Route::get('/UserEnderecoCreate',UserEnderecoCreate::class)->name('UserEndereco.create');
+
+Route::get('/UserEnderecoShow/{id}',UserEnderecoShow::class)->name('UserEndereco.show');
+Route::get('/UserEndereco/Edit/{id}',UserEnderecoEdit::class)->name('UserEndereco.edit');
+
 Route::delete('/UserEnderecoDestroy',UserEnderecoDestroy::class)->name('UserEndereco.destroy');
-Route::get('/UserEnderecoShow',UserEnderecoShow::class)->name('UserEndereco.show');
-Route::get('/UserEnderecoEdit',UserEnderecoEdit::class)->name('UserEndereco.edit');
+
+
 // Route::get('/endereco/create', [EnderecoController::class, 'create'])->name('endereco.create');
 // Route::post('/endereco/store', [EnderecoController::class, 'store'])->name('endereco.store');
 // Route::get('/endereco/{id}', [EnderecoController::class, 'show'])->name('endereco.show');

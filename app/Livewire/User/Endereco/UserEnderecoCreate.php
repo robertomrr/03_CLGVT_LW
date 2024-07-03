@@ -4,6 +4,7 @@ namespace App\Livewire\User\Endereco;
 
 use Livewire\Component;
 use App\Models\Address;
+
 class UserEnderecoCreate extends Component
 {
     public $title = 'Create User Address';
@@ -22,10 +23,10 @@ class UserEnderecoCreate extends Component
         $this->validateOnly($propertyName);
     }
 
-    public function create(){
+    public function store(){
 
         $this->validate();
-        //dd($this->street );
+        
         Address::create([
             'street'  =>$this->street,
             'city'    =>$this->city,
@@ -35,7 +36,9 @@ class UserEnderecoCreate extends Component
         ]);
 
         $this->street = $this->city = $this->state = $this->country = $this->zipcode = null;
+
         session()->flash('message','Endereço criado com sucesso');
+
     }
     
     public function render()
