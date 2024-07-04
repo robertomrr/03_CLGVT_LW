@@ -13,7 +13,7 @@
         </div>
     @endif
 
-    <form wire:submit.prevent="store" method="POST">
+    <form wire:submit.prevent="store">
         @csrf
         <div class="mb-4">
             <label class="block text-gray-700 text-sm font-bold mb-2" for="street">Street</label>
