@@ -59,7 +59,7 @@ Route::delete('/UserEnderecoDestroy',UserEnderecoDestroy::class)->name('UserEnde
 
 //WelcomeDataTable
 Route::view('WDT', 'WelcomeDataTable');
-
+Route::view('TD', 'Welcome-Todo');
 
 // Route::get('/endereco/create', [EnderecoController::class, 'create'])->name('endereco.create');
 // Route::post('/endereco/store', [EnderecoController::class, 'store'])->name('endereco.store');
