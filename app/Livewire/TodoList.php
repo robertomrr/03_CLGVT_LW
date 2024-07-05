@@ -45,7 +45,7 @@ class TodoList extends Component
 
     }
 
-    public function  toggle($todoId){
+    public function toggle($todoId){
         $todo = Todo::find($todoId);
         $todo->completed = !$todo->completed;
         $todo->save();
