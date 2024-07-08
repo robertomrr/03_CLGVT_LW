@@ -4,6 +4,7 @@ namespace App\Livewire;
 
 use App\Models\User;
 use Livewire\Component;
+use PharIo\Manifest\Url;
 use Livewire\WithPagination;
 
 class UsersTable extends Component
