@@ -57,6 +57,24 @@ return [
             'channels' => ['single'],
             'ignore_exceptions' => false,
         ],
+        
+        // 'stack' => [
+        //     'driver' => 'stack',
+        //     'channels' => ['syslog', 'slack'],
+        //     'ignore_exceptions' => false,
+        // ],
+
+        // 'database' => [
+        //     'driver' => 'custom',
+        //     'via' => App\Logging\DatabaseLogger::class,
+        // ],
+
+        'trace_sac' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/trace_sac.log'),
+            'level' => env('LOG_LEVEL', 'debug'),
+            'replace_placeholders' => true,
+        ],
 
         'single' => [
             'driver' => 'single',
