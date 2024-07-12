@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\EnderecoController;
+use App\Http\Controllers\InfoSystem;
 
 use App\Livewire\CreatePostController;
 use App\Livewire\CounterController;
@@ -60,6 +61,10 @@ Route::delete('/UserEnderecoDestroy',UserEnderecoDestroy::class)->name('UserEnde
 //WelcomeDataTable
 Route::view('wdt', 'WelcomeDataTable');
 Route::view('Todo', 'Welcome-Todo');
+
+
+//Info System
+Route::get('/info', [InfoSystem::class,'index'] )->name('infosystem.index') ;
 
 // Route::get('/endereco/create', [EnderecoController::class, 'create'])->name('endereco.create');
 // Route::post('/endereco/store', [EnderecoController::class, 'store'])->name('endereco.store');
